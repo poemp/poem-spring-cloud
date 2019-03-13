@@ -1,20 +1,22 @@
 spring:
   application:
     name: spring-zuul
+  profiles:
+      active: global
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 30
     lease-renewal-interval-in-seconds: 10
     prefer-ip-address: true
-    ip-address: 127.0.0.1
-    instance-id: 127.0.0.1:${server.port}
+    ip-address: ${eureka.global.ip-address}
+    instance-id: ${eureka.instance.ip-address}:${server.port}
   client:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://192.168.24.236:8761/eureka/
+      defaultZone: ${eureka.global.client.service-url.defaultZone}
 server:
-  port: 8420
+  port: ${spring-zuul.port}
 zuul:
   #  隐藏所有微服务名称(即使用微服务名称无法访问到服务)
   ignored-services: "*"

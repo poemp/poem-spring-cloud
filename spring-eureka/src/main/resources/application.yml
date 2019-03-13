@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: global
+  application:
+    name: spring-eureka
+server:
+  port: ${spring-eureka.port}
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

@@ -1,0 +1,32 @@
+#  eureka 服务治理的远程注册地址
+eureka:
+  global:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: 127.0.0.1
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+# 消费者
+service-consume:
+  port: 8080
+# 第一个服务的提供者
+service-provide-1:
+  port: 8081
+# 第二个服务的提供者
+service-provide-2:
+  port: 8082
+#eureka port  服务治理
+spring-eureka:
+  port: 8761
+#zuul port 网关
+spring-zuul:
+  port: 8420
+#zuul hystrix 断路器
+spring-hystrix:
+  port: 8421
