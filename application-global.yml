@@ -14,19 +14,25 @@ eureka:
 
 # 消费者
 service-consume:
+  name: service-consume
   port: 8080
 # 第一个服务的提供者
 service-provide-1:
+  name: service-provide-1
   port: 8081
 # 第二个服务的提供者
 service-provide-2:
+  name: service-provide-2
   port: 8082
 #eureka port  服务治理
 spring-eureka:
+  name: spring-eureka
   port: 8761
 #zuul port 网关
 spring-zuul:
+  name: spring-zuul
   port: 8420
 #zuul hystrix 断路器
 spring-hystrix:
+  name: spring-hystrix
   port: 8421

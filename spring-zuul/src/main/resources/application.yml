@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-zuul
+    name: ${spring-zuul.name}
   profiles:
       active: global
 eureka:
