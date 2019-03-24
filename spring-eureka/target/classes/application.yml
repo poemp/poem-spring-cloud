@@ -2,7 +2,7 @@ spring:
   profiles:
     active: global
   application:
-    name: spring-eureka
+    name: ${spring-eureka.name}
 server:
   port: ${spring-eureka.port}
 eureka:

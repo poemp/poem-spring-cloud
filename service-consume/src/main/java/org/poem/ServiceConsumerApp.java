@@ -6,6 +6,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.jmx.support.RegistrationPolicy;
 
+/**
+ *
+ * @author
+ * @since
+ */
 @EnableEurekaClient
 @SpringBootApplication
 @EnableMBeanExport(registration = RegistrationPolicy.IGNORE_EXISTING)
