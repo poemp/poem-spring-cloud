@@ -36,3 +36,6 @@ spring-zuul:
 spring-hystrix:
   name: spring-hystrix
   port: 8421
+hystrix-dashboard:
+  name: hystrix-dashboard
+  port: 8422

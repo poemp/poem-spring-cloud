@@ -16,8 +16,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ConsumerApplication {
+public class HystrixApplication {
 
+    /**
+     * 负载均衡
+     * @return
+     */
     @Bean
     @LoadBalanced
     RestTemplate restTemplate(){
@@ -25,6 +29,6 @@ public class ConsumerApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerApplication.class, args);
+        SpringApplication.run(HystrixApplication.class, args);
     }
 }

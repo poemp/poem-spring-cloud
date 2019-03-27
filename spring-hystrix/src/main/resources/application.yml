@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ${spring-zuul.name}
+    name: ${spring-hystrix.name}
   profiles:
       active: global
 eureka:
@@ -16,4 +16,4 @@ eureka:
     service-url:
       defaultZone: ${eureka.global.client.service-url.defaultZone}
 server:
-  port: ${spring-zuul.port}
+  port: ${spring-hystrix.port}
