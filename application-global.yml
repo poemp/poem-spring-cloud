@@ -12,6 +12,12 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/
 
+# 全局配置
+global:
+  config:
+    ip: 127.0.0.1
+
+
 # 消费者
 service-consume:
   name: service-consume
@@ -42,3 +48,9 @@ hystrix-dashboard:
 spring-feign:
   name: spring-feign
   port: 8423
+spring-config:
+  name: spring-config
+  port: 8424
+spring-config-client:
+  name: spring-config-client
+    port: 8425

@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ${spring-config-client.name}
+  profiles:
+      active: global
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: ${spring-config.name}
+      retry:
+#        配置重试次数，默认为6
+        max-attempts: 6
+#        间隔乘数，默认1. 1
+        multiplier: 1.1
+#        初始重试间隔时间
+        initial-interval: 1000
+#          最大间隔时间
+        max-interval: 2000
+      uri: http://${global.config.ip}:${spring-config.port}/
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 30
+    lease-renewal-interval-in-seconds: 10
+    prefer-ip-address: true
+    ip-address: ${eureka.global.ip-address}
+    instance-id: ${eureka.instance.ip-address}:${server.port}
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${eureka.global.client.service-url.defaultZone}
+server:
+  port: ${spring-config-client.port}

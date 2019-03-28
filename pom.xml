@@ -18,6 +18,8 @@
         <module>spring-hystrix-dashboard</module>
         <module>spring-feign</module>
         <module>service-common</module>
+        <module>spring-cloud-config</module>
+        <module>spring-cloud-config-client</module>
     </modules>
 
 
