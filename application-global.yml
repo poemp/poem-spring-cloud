@@ -53,4 +53,7 @@ spring-config:
   port: 8424
 spring-config-client:
   name: spring-config-client
-    port: 8425
+  port: 8425
+spring-bus:
+  name: spring-bus
+  port: 8426
