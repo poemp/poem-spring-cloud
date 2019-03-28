@@ -16,6 +16,8 @@
         <module>service-provide-2</module>
         <module>service-consume</module>
         <module>spring-hystrix-dashboard</module>
+        <module>spring-feign</module>
+        <module>service-common</module>
     </modules>
 
 
@@ -39,6 +41,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure-processor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.14</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

@@ -1,8 +1,8 @@
 spring:
   application:
-    name: ${spring-zuul.name}
+    name: ${spring-feign.name}
   profiles:
-      active: global
+    active: global
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 30
@@ -16,4 +16,11 @@ eureka:
     service-url:
       defaultZone: ${eureka.global.client.service-url.defaultZone}
 server:
-  port: ${spring-zuul.port}
+  port: ${spring-feign.port}
+#   请求压缩
+feign:
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true

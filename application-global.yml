@@ -39,3 +39,6 @@ spring-hystrix:
 hystrix-dashboard:
   name: hystrix-dashboard
   port: 8422
+spring-feign:
+  name: spring-feign
+  port: 8423
