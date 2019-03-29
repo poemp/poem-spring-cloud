@@ -3,6 +3,8 @@ spring:
     name: ${service-provide-2.name}
   profiles:
     active: global
+  zipkin:
+    base-url: ${zikin.base.ip}:${spring-zuul.port}
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 30

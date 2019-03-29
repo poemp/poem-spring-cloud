@@ -3,6 +3,8 @@ spring:
     name: ${spring-config.name}
   profiles:
       active: global
+  zipkin:
+    base-url: ${zikin.base.ip}:${spring-zuul.port}
   cloud:
     config:
       discovery:

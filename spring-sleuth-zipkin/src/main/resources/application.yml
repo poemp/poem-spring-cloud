@@ -1,8 +1,12 @@
 spring:
   application:
-    name: ${hystrix-dashboard.name}
+    name: ${spring-zipkin.name}
   profiles:
-      active: global
+    active: global
+  main:
+    allow-bean-definition-overriding: true
+  zipkin:
+    base-url: ${zikin.base.ip}:${spring-zuul.port}
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 30
@@ -16,4 +20,4 @@ eureka:
     service-url:
       defaultZone: ${eureka.global.client.service-url.defaultZone}
 server:
-  port: ${hystrix-dashboard.port}
+  port: ${spring-zipkin.port}

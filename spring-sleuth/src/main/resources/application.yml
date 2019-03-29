@@ -1,8 +1,10 @@
 spring:
   application:
-    name: ${spring-hystrix.name}
+    name: ${spring-sleuth.name}
   profiles:
-      active: global
+    active: global
+  zipkin:
+    base-url: ${zikin.base.ip}:${spring-zuul.port}
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 30
@@ -16,4 +18,4 @@ eureka:
     service-url:
       defaultZone: ${eureka.global.client.service-url.defaultZone}
 server:
-  port: ${spring-hystrix.port}
+  port: ${spring-sleuth.port}

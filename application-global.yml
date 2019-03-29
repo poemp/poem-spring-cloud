@@ -11,6 +11,9 @@ eureka:
     register-with-eureka: true
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/
+zikin:
+  base:
+    ip: http://127.0.0.1
 
 # 全局配置
 global:
@@ -57,3 +60,9 @@ spring-config-client:
 spring-bus:
   name: spring-bus
   port: 8426
+spring-sleuth:
+  name: spring-sleuth
+  port: 8427
+spring-zipkin:
+  name: spring-zipkin
+  port: 8428

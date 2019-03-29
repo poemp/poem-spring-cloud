@@ -3,6 +3,8 @@ spring:
     active: global
   application:
     name: ${spring-eureka.name}
+  zipkin:
+    base-url: ${zikin.base.ip}:${spring-zuul.port}
 server:
   port: ${spring-eureka.port}
 eureka:
