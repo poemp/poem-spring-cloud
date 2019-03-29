@@ -10,6 +10,9 @@ import org.springframework.boot.actuate.metrics.web.servlet.WebMvcTagsProvider;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ * @author Administrator
+ */
 public class TagsProvider implements WebMvcTagsProvider {
     static Logger logger = LoggerFactory.getLogger(TagsProvider.class);
 

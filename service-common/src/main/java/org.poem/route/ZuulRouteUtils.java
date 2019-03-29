@@ -37,6 +37,13 @@ public class ZuulRouteUtils {
         springFeign.setPath("/spring-feign/**");
         springFeign.setServiceId("spring-feign");
         zuulRouteVOS.add(springFeign);
+
+        ZuulRouteVO sleuth = new ZuulRouteVO();
+        sleuth.setEnabled(true);
+        sleuth.setId("spring-sleuth");
+        sleuth.setPath("/spring-sleuth/**");
+        sleuth.setServiceId("spring-sleuth");
+        zuulRouteVOS.add(sleuth);
         return zuulRouteVOS;
     }
 }
