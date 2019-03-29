@@ -17,6 +17,7 @@ zikin:
 
 # 全局配置
 global:
+  ip: http://127.0.0.1
   config:
     ip: 127.0.0.1
 
@@ -66,3 +67,9 @@ spring-sleuth:
 spring-zipkin:
   name: spring-zipkin
   port: 8428
+spring-security:
+  name: spring-security
+  port: 8429
+spring-gateway:
+  name: spring-gateway
+  port: 8430

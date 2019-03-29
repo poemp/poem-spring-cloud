@@ -97,6 +97,8 @@ public class AccessFilter extends ZuulFilter {
         // 申请客户端密钥头
         //添加Basic Auth认证信息
         ctx.addZuulRequestHeader(AuthorizationEnum.AUTHORIZATION, "Basic " + getBase64Credentials("app01", "*****"));
+        ctx.setSendZuulResponse(true);
+        ctx.setResponseBody("unauthorized");
         logger.info("access token ok");
         return null;
     }

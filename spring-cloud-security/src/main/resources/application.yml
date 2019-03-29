@@ -1,10 +1,13 @@
 spring:
   application:
-    name: ${spring-zuul.name}
+    name: ${spring-security.name}
   profiles:
       active: global
   zipkin:
     base-url: ${zikin.base.ip}:${spring-zipkin.port}
+  redis:
+    host: 192.168.24.227
+    port: 6379
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 30
@@ -18,6 +21,4 @@ eureka:
     service-url:
       defaultZone: ${eureka.global.client.service-url.defaultZone}
 server:
-  port: ${spring-zuul.port}
-zuul:
-  sensitive-headers: *
+  port: ${spring-security.port}

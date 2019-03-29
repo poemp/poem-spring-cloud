@@ -23,6 +23,8 @@
         <module>spring-cloud-bus</module>
         <module>spring-sleuth</module>
         <module>spring-sleuth-zipkin</module>
+        <module>spring-cloud-security</module>
+        <module>spring-gateway</module>
     </modules>
 
 
