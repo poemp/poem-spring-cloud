@@ -19,3 +19,5 @@ eureka:
       defaultZone: ${eureka.global.client.service-url.defaultZone}
 server:
   port: ${spring-zuul.port}
+zuul:
+  sensitive-headers: 

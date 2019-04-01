@@ -20,4 +20,4 @@ eureka:
 server:
   port: ${spring-zuul.port}
 zuul:
-  sensitive-headers: *
+  sensitive-headers:
