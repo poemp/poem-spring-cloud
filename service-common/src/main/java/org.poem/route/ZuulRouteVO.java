@@ -1,5 +1,6 @@
 package org.poem.route;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,6 +11,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @NoArgsConstructor
+@Data
 public class ZuulRouteVO {
 
     /**
