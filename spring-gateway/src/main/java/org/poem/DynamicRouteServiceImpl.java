@@ -27,13 +27,22 @@ public class DynamicRouteServiceImpl implements ApplicationEventPublisherAware{
     }
 
 
-    //增加路由
+    /**
+     * 增加路由
+     * @param definition
+     * @return
+     */
     public String add(RouteDefinition definition) {
         routeDefinitionWriter.save(Mono.just(definition)).subscribe();
         this.publisher.publishEvent(new RefreshRoutesEvent(this));
         return "success";
     }
-    //更新路由
+
+    /**
+     * 更新路由
+     * @param definition
+     * @return
+     */
     public String update(RouteDefinition definition) {
         try {
             delete(definition.getId());
@@ -48,7 +57,12 @@ public class DynamicRouteServiceImpl implements ApplicationEventPublisherAware{
             return "update route  fail";
         }
     }
-    //删除路由
+
+    /**
+     * 删除路由
+     * @param id
+     * @return
+     */
     public Mono<ResponseEntity<Object>> delete(String id) {
         return this.routeDefinitionWriter.delete(Mono.just(id)).then(Mono.defer(() -> {
             return Mono.just(ResponseEntity.ok().build());

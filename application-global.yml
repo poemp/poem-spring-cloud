@@ -22,6 +22,10 @@ global:
     ip: 127.0.0.1
 
 
+#eureka port  服务治理
+spring-eureka:
+  name: spring-eureka
+  port: 8761
 # 消费者
 service-consume:
   name: service-consume
@@ -34,10 +38,6 @@ service-provide-1:
 service-provide-2:
   name: service-provide-2
   port: 8082
-#eureka port  服务治理
-spring-eureka:
-  name: spring-eureka
-  port: 8761
 #zuul port 网关
 spring-zuul:
   name: spring-zuul

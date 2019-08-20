@@ -42,12 +42,12 @@ public class SpringGatewayApplication {
         return new DiscoveryClientRouteDefinitionLocator(discoveryClient, properties);
     }
 
-    @Bean
-    public ConversionService getConversionService() {
-        ConversionServiceFactoryBean bean = new ConversionServiceFactoryBean();
-        bean.afterPropertiesSet();
-        return bean.getObject();
-    }
+//    @Bean
+//    public ConversionService getConversionService() {
+//        ConversionServiceFactoryBean bean = new ConversionServiceFactoryBean();
+//        bean.afterPropertiesSet();
+//        return bean.getObject();
+//    }
 
     @Bean
     public ServerCodecConfigurer serverCodecConfigurer() {

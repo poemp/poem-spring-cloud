@@ -15,7 +15,12 @@ import reactor.core.publisher.Mono;
 @Component
 public class RequestGlobalFilter implements GlobalFilter,Ordered {
 
-    //执行逻辑
+    /**
+     * 执行逻辑
+     * @param exchange
+     * @param chain
+     * @return
+     */
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
@@ -24,7 +29,10 @@ public class RequestGlobalFilter implements GlobalFilter,Ordered {
         return chain.filter(exchange);
     }
 
-    //执行顺序
+    /**
+     * 执行顺序
+     * @return
+     */
     @Override
     public int getOrder() {
         return 1;

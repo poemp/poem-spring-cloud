@@ -28,7 +28,11 @@ public class RouteController {
     @Autowired
     private DynamicRouteServiceImpl dynamicRouteService;
 
-    //增加路由
+    /**
+     * 增加路由
+     * @param gwdefinition
+     * @return
+     */
     @PostMapping("/add")
     public String add(@RequestBody GatewayRouteDefinition gwdefinition) {
         String flag = "fail";
@@ -40,7 +44,12 @@ public class RouteController {
         }
         return flag;
     }
-    //删除路由
+
+    /**
+     * 删除路由
+     * @param id
+     * @return
+     */
     @DeleteMapping("/routes/{id}")
     public Mono<ResponseEntity<Object>> delete(@PathVariable String id) {
         try {
@@ -50,14 +59,23 @@ public class RouteController {
         }
         return null;
     }
-    //更新路由
+
+    /**更新路由
+     *
+     * @param gwdefinition
+     * @return
+     */
     @PostMapping("/update")
     public String update(@RequestBody GatewayRouteDefinition gwdefinition) {
         RouteDefinition definition = assembleRouteDefinition(gwdefinition);
         return this.dynamicRouteService.update(definition);
     }
 
-    //把前端传递的参数转换成路由对象
+    /**
+     * 把前端传递的参数转换成路由对象
+     * @param gwdefinition
+     * @return
+     */
     private RouteDefinition assembleRouteDefinition(GatewayRouteDefinition gwdefinition) {
         RouteDefinition definition = new RouteDefinition();
         definition.setId(gwdefinition.getId());
